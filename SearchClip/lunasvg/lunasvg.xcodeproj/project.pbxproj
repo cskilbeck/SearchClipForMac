@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06FB78AB75704F3D9214BF4F /* stopelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C05F3F23CC794CD5BA64AEFE /* stopelement.cpp */; };
+		1E7D08B3E9744B8CACF49650 /* plutovg-ft-math.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FD0D554B53C4FFBA28B730C /* plutovg-ft-math.c */; };
+		27D5A0894BB44838992BBF4B /* gelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EB7A16BE77484397F3DD54 /* gelement.cpp */; };
+		30E225D52859464484BF547C /* symbolelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F098DAC09AF4427DA8C5EC1E /* symbolelement.cpp */; };
+		3605BD971CBE4B4293BE1DDF /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A2938DD1F14A468AFCEEEA /* element.cpp */; };
+		3CAA0E40DD9A4E278C6652BE /* defselement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0D3D1115AF44C7BACF14A8E /* defselement.cpp */; };
+		43343B44044440CEAB08F4D1 /* canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C401279724A94340A989E56C /* canvas.cpp */; };
+		47FCA30E84B44085A1D5DA33 /* styledelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D18096755AD4EC093D61924 /* styledelement.cpp */; };
+		590958E66D824D0D82E500EB /* maskelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 581039F4F0CF4A17A0B3527D /* maskelement.cpp */; };
+		5A499D9DF5C0488BA4C2AA8F /* svgelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A7B6A4755D4A3490A235D6 /* svgelement.cpp */; };
+		5BCD755BC3E54224B10357A0 /* plutovg-dash.c in Sources */ = {isa = PBXBuildFile; fileRef = C1D913FE06D649B28004C2AC /* plutovg-dash.c */; };
+		66D4783E67084BE5B0746425 /* plutovg.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE44E9F21D429594B3AA1D /* plutovg.c */; };
+		6890F58DA1514652A25EAFB4 /* styleelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C7669E5DBB8426590545BB0 /* styleelement.cpp */; };
+		72F1643BAECD406B87525661 /* markerelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DF4FA3CB9714800A7AC8424 /* markerelement.cpp */; };
+		76639E6B319849AC9BE7FFAC /* plutovg-geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 53522E4C14DD428683355779 /* plutovg-geometry.c */; };
+		9A93AAE2BBAD43D8BA725A61 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D27F017705F4ED791AA69F0 /* parser.cpp */; };
+		AA26310CDE074CE9A5FD451A /* lunasvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CAC12101B342FFB88071CE /* lunasvg.cpp */; };
+		AD879A3175FD4C9FAA74219B /* plutovg-ft-stroker.c in Sources */ = {isa = PBXBuildFile; fileRef = EB784DDECA2A491386761656 /* plutovg-ft-stroker.c */; };
+		ADED3C216EEF44EC8D928E47 /* graphicselement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE9E7FF0FF76434ABDED593F /* graphicselement.cpp */; };
+		AE6A1D6F17A44A4BA04FBD3A /* plutovg-paint.c in Sources */ = {isa = PBXBuildFile; fileRef = 31812C04A4464D60A8E94D36 /* plutovg-paint.c */; };
+		AE9729A90B5840ED96C8F13E /* paintelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C33E49D27477EA68AFABF /* paintelement.cpp */; };
+		B979639AA94840ED968E511F /* useelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02836054ECF240B89FFEFE12 /* useelement.cpp */; };
+		BF576857DBC743988AF2094C /* clippathelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28404E379D1E40B5926E04B1 /* clippathelement.cpp */; };
+		D20AC20B1374476BA61894A9 /* plutovg-rle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FE2010DC048BFB7FA27AF /* plutovg-rle.c */; };
+		DAE794F9EA0D4718AD8B2254 /* plutovg-ft-raster.c in Sources */ = {isa = PBXBuildFile; fileRef = C8DE76A8E5E34417B2F3F327 /* plutovg-ft-raster.c */; };
+		E0B8614C3705464D8D39DDD5 /* layoutcontext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F9E9C3274425BF8E1109 /* layoutcontext.cpp */; };
+		F7A4450340AB4080BD64FC1F /* property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8408C7464BA148B0B47DC5AB /* property.cpp */; };
+		FC1A1EF71A7E4294997FF94B /* plutovg-blend.c in Sources */ = {isa = PBXBuildFile; fileRef = E87C45E12EF84F1C902AFFAB /* plutovg-blend.c */; };
+		FE375EB6B38D49DB91BB82A0 /* geometryelement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67506C32394843BC98F95F25 /* geometryelement.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02836054ECF240B89FFEFE12 /* useelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = useelement.cpp; path = source/useelement.cpp; sourceTree = SOURCE_ROOT; };
+		1DF4FA3CB9714800A7AC8424 /* markerelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = markerelement.cpp; path = source/markerelement.cpp; sourceTree = SOURCE_ROOT; };
+		28404E379D1E40B5926E04B1 /* clippathelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clippathelement.cpp; path = source/clippathelement.cpp; sourceTree = SOURCE_ROOT; };
+		31812C04A4464D60A8E94D36 /* plutovg-paint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-paint.c"; path = "3rdparty/plutovg/plutovg-paint.c"; sourceTree = SOURCE_ROOT; };
+		3D5C33E49D27477EA68AFABF /* paintelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = paintelement.cpp; path = source/paintelement.cpp; sourceTree = SOURCE_ROOT; };
+		46A7B6A4755D4A3490A235D6 /* svgelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = svgelement.cpp; path = source/svgelement.cpp; sourceTree = SOURCE_ROOT; };
+		53522E4C14DD428683355779 /* plutovg-geometry.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-geometry.c"; path = "3rdparty/plutovg/plutovg-geometry.c"; sourceTree = SOURCE_ROOT; };
+		581039F4F0CF4A17A0B3527D /* maskelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = maskelement.cpp; path = source/maskelement.cpp; sourceTree = SOURCE_ROOT; };
+		67506C32394843BC98F95F25 /* geometryelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = geometryelement.cpp; path = source/geometryelement.cpp; sourceTree = SOURCE_ROOT; };
+		6FD0D554B53C4FFBA28B730C /* plutovg-ft-math.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-ft-math.c"; path = "3rdparty/plutovg/plutovg-ft-math.c"; sourceTree = SOURCE_ROOT; };
+		7BDE44E9F21D429594B3AA1D /* plutovg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = plutovg.c; path = 3rdparty/plutovg/plutovg.c; sourceTree = SOURCE_ROOT; };
+		7C7669E5DBB8426590545BB0 /* styleelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = styleelement.cpp; path = source/styleelement.cpp; sourceTree = SOURCE_ROOT; };
+		81CAC12101B342FFB88071CE /* lunasvg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lunasvg.cpp; path = source/lunasvg.cpp; sourceTree = SOURCE_ROOT; };
+		83A2938DD1F14A468AFCEEEA /* element.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = element.cpp; path = source/element.cpp; sourceTree = SOURCE_ROOT; };
+		8408C7464BA148B0B47DC5AB /* property.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = property.cpp; path = source/property.cpp; sourceTree = SOURCE_ROOT; };
+		8D18096755AD4EC093D61924 /* styledelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = styledelement.cpp; path = source/styledelement.cpp; sourceTree = SOURCE_ROOT; };
+		9D27F017705F4ED791AA69F0 /* parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = parser.cpp; path = source/parser.cpp; sourceTree = SOURCE_ROOT; };
+		9D7FE2010DC048BFB7FA27AF /* plutovg-rle.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-rle.c"; path = "3rdparty/plutovg/plutovg-rle.c"; sourceTree = SOURCE_ROOT; };
+		A0D3D1115AF44C7BACF14A8E /* defselement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = defselement.cpp; path = source/defselement.cpp; sourceTree = SOURCE_ROOT; };
+		A1EB7A16BE77484397F3DD54 /* gelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gelement.cpp; path = source/gelement.cpp; sourceTree = SOURCE_ROOT; };
+		C05F3F23CC794CD5BA64AEFE /* stopelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stopelement.cpp; path = source/stopelement.cpp; sourceTree = SOURCE_ROOT; };
+		C1D913FE06D649B28004C2AC /* plutovg-dash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-dash.c"; path = "3rdparty/plutovg/plutovg-dash.c"; sourceTree = SOURCE_ROOT; };
+		C401279724A94340A989E56C /* canvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = canvas.cpp; path = source/canvas.cpp; sourceTree = SOURCE_ROOT; };
+		C8DE76A8E5E34417B2F3F327 /* plutovg-ft-raster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-ft-raster.c"; path = "3rdparty/plutovg/plutovg-ft-raster.c"; sourceTree = SOURCE_ROOT; };
+		DE9E7FF0FF76434ABDED593F /* graphicselement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = graphicselement.cpp; path = source/graphicselement.cpp; sourceTree = SOURCE_ROOT; };
+		E87C45E12EF84F1C902AFFAB /* plutovg-blend.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-blend.c"; path = "3rdparty/plutovg/plutovg-blend.c"; sourceTree = SOURCE_ROOT; };
+		EB784DDECA2A491386761656 /* plutovg-ft-stroker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "plutovg-ft-stroker.c"; path = "3rdparty/plutovg/plutovg-ft-stroker.c"; sourceTree = SOURCE_ROOT; };
+		F098DAC09AF4427DA8C5EC1E /* symbolelement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = symbolelement.cpp; path = source/symbolelement.cpp; sourceTree = SOURCE_ROOT; };
+		F69F376983004BF9A9386BF4 /* liblunasvg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblunasvg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE2F9E9C3274425BF8E1109 /* layoutcontext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = layoutcontext.cpp; path = source/layoutcontext.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ABA4D4E8AA546C598CB2C80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17AD4858A97249CDAE1ABB33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69F376983004BF9A9386BF4 /* liblunasvg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		194613928413408B847FC410 = {
+			isa = PBXGroup;
+			children = (
+				4B42C17C8C4B4E7CAD3FFDE9 /* lunasvg */,
+				17AD4858A97249CDAE1ABB33 /* Products */,
+				37D3CC7937284FB198512895 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37D3CC7937284FB198512895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B42C17C8C4B4E7CAD3FFDE9 /* lunasvg */ = {
+			isa = PBXGroup;
+			children = (
+				98702A449A2044D79839881F /* Source Files */,
+			);
+			name = lunasvg;
+			sourceTree = "<group>";
+		};
+		98702A449A2044D79839881F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E87C45E12EF84F1C902AFFAB /* plutovg-blend.c */,
+				C1D913FE06D649B28004C2AC /* plutovg-dash.c */,
+				6FD0D554B53C4FFBA28B730C /* plutovg-ft-math.c */,
+				C8DE76A8E5E34417B2F3F327 /* plutovg-ft-raster.c */,
+				EB784DDECA2A491386761656 /* plutovg-ft-stroker.c */,
+				53522E4C14DD428683355779 /* plutovg-geometry.c */,
+				31812C04A4464D60A8E94D36 /* plutovg-paint.c */,
+				9D7FE2010DC048BFB7FA27AF /* plutovg-rle.c */,
+				7BDE44E9F21D429594B3AA1D /* plutovg.c */,
+				C401279724A94340A989E56C /* canvas.cpp */,
+				28404E379D1E40B5926E04B1 /* clippathelement.cpp */,
+				A0D3D1115AF44C7BACF14A8E /* defselement.cpp */,
+				83A2938DD1F14A468AFCEEEA /* element.cpp */,
+				A1EB7A16BE77484397F3DD54 /* gelement.cpp */,
+				67506C32394843BC98F95F25 /* geometryelement.cpp */,
+				DE9E7FF0FF76434ABDED593F /* graphicselement.cpp */,
+				FAE2F9E9C3274425BF8E1109 /* layoutcontext.cpp */,
+				81CAC12101B342FFB88071CE /* lunasvg.cpp */,
+				1DF4FA3CB9714800A7AC8424 /* markerelement.cpp */,
+				581039F4F0CF4A17A0B3527D /* maskelement.cpp */,
+				3D5C33E49D27477EA68AFABF /* paintelement.cpp */,
+				9D27F017705F4ED791AA69F0 /* parser.cpp */,
+				8408C7464BA148B0B47DC5AB /* property.cpp */,
+				C05F3F23CC794CD5BA64AEFE /* stopelement.cpp */,
+				8D18096755AD4EC093D61924 /* styledelement.cpp */,
+				7C7669E5DBB8426590545BB0 /* styleelement.cpp */,
+				46A7B6A4755D4A3490A235D6 /* svgelement.cpp */,
+				F098DAC09AF4427DA8C5EC1E /* symbolelement.cpp */,
+				02836054ECF240B89FFEFE12 /* useelement.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		832F63458D884D678B274988 /* lunasvg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F5A3BD911B047F492AE8E1D /* Build configuration list for PBXNativeTarget "lunasvg" */;
+			buildPhases = (
+				DF6007591FFF4589BB870CBF /* Sources */,
+				5ABA4D4E8AA546C598CB2C80 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lunasvg;
+			productName = lunasvg;
+			productReference = F69F376983004BF9A9386BF4 /* liblunasvg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		699FF21659D945B2881373C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1610;
+			};
+			buildConfigurationList = 33D31384321747DD9EA887AF /* Build configuration list for PBXProject "lunasvg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 194613928413408B847FC410;
+			projectDirPath = /Users/charlie/dev/MicMuter/lunasvg;
+			projectRoot = "";
+			targets = (
+				832F63458D884D678B274988 /* lunasvg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF6007591FFF4589BB870CBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1A1EF71A7E4294997FF94B /* plutovg-blend.c in Sources */,
+				5BCD755BC3E54224B10357A0 /* plutovg-dash.c in Sources */,
+				1E7D08B3E9744B8CACF49650 /* plutovg-ft-math.c in Sources */,
+				DAE794F9EA0D4718AD8B2254 /* plutovg-ft-raster.c in Sources */,
+				AD879A3175FD4C9FAA74219B /* plutovg-ft-stroker.c in Sources */,
+				76639E6B319849AC9BE7FFAC /* plutovg-geometry.c in Sources */,
+				AE6A1D6F17A44A4BA04FBD3A /* plutovg-paint.c in Sources */,
+				D20AC20B1374476BA61894A9 /* plutovg-rle.c in Sources */,
+				66D4783E67084BE5B0746425 /* plutovg.c in Sources */,
+				43343B44044440CEAB08F4D1 /* canvas.cpp in Sources */,
+				BF576857DBC743988AF2094C /* clippathelement.cpp in Sources */,
+				3CAA0E40DD9A4E278C6652BE /* defselement.cpp in Sources */,
+				3605BD971CBE4B4293BE1DDF /* element.cpp in Sources */,
+				27D5A0894BB44838992BBF4B /* gelement.cpp in Sources */,
+				FE375EB6B38D49DB91BB82A0 /* geometryelement.cpp in Sources */,
+				ADED3C216EEF44EC8D928E47 /* graphicselement.cpp in Sources */,
+				E0B8614C3705464D8D39DDD5 /* layoutcontext.cpp in Sources */,
+				AA26310CDE074CE9A5FD451A /* lunasvg.cpp in Sources */,
+				72F1643BAECD406B87525661 /* markerelement.cpp in Sources */,
+				590958E66D824D0D82E500EB /* maskelement.cpp in Sources */,
+				AE9729A90B5840ED96C8F13E /* paintelement.cpp in Sources */,
+				9A93AAE2BBAD43D8BA725A61 /* parser.cpp in Sources */,
+				F7A4450340AB4080BD64FC1F /* property.cpp in Sources */,
+				06FB78AB75704F3D9214BF4F /* stopelement.cpp in Sources */,
+				47FCA30E84B44085A1D5DA33 /* styledelement.cpp in Sources */,
+				6890F58DA1514652A25EAFB4 /* styleelement.cpp in Sources */,
+				5A499D9DF5C0488BA4C2AA8F /* svgelement.cpp in Sources */,
+				30E225D52859464484BF547C /* symbolelement.cpp in Sources */,
+				B979639AA94840ED968E511F /* useelement.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0006CD80AAB84836B7F8CEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/Build";
+			};
+			name = Debug;
+		};
+		58A3BA311784491A9884E7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build/$(CONFIGURATION)";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/source",
+					"$(PROJECT_DIR)/3rdparty/plutovg",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"'-std=gnu11'",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lunasvg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "$(PROJECT_DIR)/Build/$(CONFIGURATION)";
+				TARGET_TEMP_DIR = "$(PROJECT_DIR)/Build/lunasvg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		633576FB6EEB438792E447B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build/$(CONFIGURATION)";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/source",
+					"$(PROJECT_DIR)/3rdparty/plutovg",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu11'",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lunasvg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "$(PROJECT_DIR)/Build/$(CONFIGURATION)";
+				TARGET_TEMP_DIR = "$(PROJECT_DIR)/Build/lunasvg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		F006721C5B7644D089B247E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/Build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F5A3BD911B047F492AE8E1D /* Build configuration list for PBXNativeTarget "lunasvg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A3BA311784491A9884E7ED /* Debug */,
+				633576FB6EEB438792E447B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33D31384321747DD9EA887AF /* Build configuration list for PBXProject "lunasvg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0006CD80AAB84836B7F8CEE7 /* Debug */,
+				F006721C5B7644D089B247E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 699FF21659D945B2881373C2 /* Project object */;
+}

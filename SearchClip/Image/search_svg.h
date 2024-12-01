@@ -1,0 +1,13 @@
+const char *search_svg = R"***(
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <ellipse fill="#0fffff" cx="127" cy="127" rx="120" ry="120" stroke-width="8" stroke="#cccccc" fill-opacity="0"/>
+  <ellipse fill="#0fffff" stroke="#cccccc" stroke-width="8" cx="128" cy="127" rx="64" ry="120" fill-opacity="0"/>
+  <line fill="none" stroke="#cccccc" stroke-width="8" x1="28" y1="64" x2="228" y2="64"/>
+  <line fill="none" stroke="#cccccc" stroke-width="8" x1="28" y1="192.0192" x2="228" y2="192.0192"/>
+  <line fill="none" stroke="#cccccc" stroke-width="8" x1="8" y1="128" x2="248" y2="128"/>
+  <line fill="none" stroke-width="8" x1="8" y1="127" x2="248" y2="127" stroke="#cccccc" transform="rotate(-90 128 127)"/>
+  <path stroke="#000" d="m174.60001,207.85027c0,-5.64888 3.65297,-10.39584 8,-10.39584l54,0c4.34703,0 8,4.74696 8,10.39584l0,1.29948c0,5.64888 -3.65297,10.39584 -8,10.39584l-54,0c-4.34703,0 -8,-4.74696 -8,-10.39584l0,-1.29948z" transform="rotate(45 209.6 208.5)" opacity="undefined" stroke-width="8" fill="#56ffff"/>
+  <ellipse fill="#56ffff" stroke="#000" stroke-width="8" cx="144" cy="141" rx="64" ry="64"/>
+</svg>
+)***";
