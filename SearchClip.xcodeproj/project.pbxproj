@@ -8,13 +8,28 @@
 
 /* Begin PBXFileReference section */
 		AA41F20F2CFC80280006D312 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
+		AAAE4B852D00F32C00AEA4BA /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AAEB68E12CFBDDE7000D000A /* SearchClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEB69492CFBDF8A000D000A /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AAAE4BD22D00FD5200AEA4BA /* Exceptions for "SearchClip" folder in "SearchClip" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			additionalCompilerFlagsByRelativePath = {
+				"lunasvg/3rdparty/plutovg/plutovg-ft-math.c" = "-w";
+				"lunasvg/3rdparty/plutovg/plutovg-ft-raster.c" = "-w";
+			};
+			target = AAEB68E02CFBDDE7000D000A /* SearchClip */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AAEB68E32CFBDDE7000D000A /* SearchClip */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AAAE4BD22D00FD5200AEA4BA /* Exceptions for "SearchClip" folder in "SearchClip" target */,
+			);
 			path = SearchClip;
 			sourceTree = "<group>";
 		};
@@ -32,6 +47,13 @@
 
 /* Begin PBXGroup section */
 		AA41F2282CFC80280006D312 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAAE4B9E2D00F32C00AEA4BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -120,6 +142,10 @@
 				{
 					ProductGroup = AA41F2282CFC80280006D312 /* Products */;
 					ProjectRef = AA41F20F2CFC80280006D312 /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AAAE4B9E2D00F32C00AEA4BA /* Products */;
+					ProjectRef = AAAE4B852D00F32C00AEA4BA /* lunasvg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -271,13 +297,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SearchClip/SearchClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = 6395H7R8WV;
+				DEVELOPMENT_TEAM = 6395H7R8WV;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SearchClip;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "(c) 2024 C.H.Skilbeck";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -290,7 +317,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chs.searchclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
@@ -301,13 +327,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SearchClip/SearchClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = 6395H7R8WV;
+				DEVELOPMENT_TEAM = 6395H7R8WV;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SearchClip;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "(c) 2024 C.H.Skilbeck";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -320,7 +347,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chs.searchclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;

@@ -7,10 +7,8 @@
 typedef struct settings {
 
     bool run_at_login;
-    bool show_overlay;
     bool hotkey_enabled;
-    uint32 hotkey;
-    uint32 modifiers;
+    NSString *search_format;
 
 } settings_t;
 

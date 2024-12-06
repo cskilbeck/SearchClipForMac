@@ -8,7 +8,7 @@
 
 namespace
 {
-NSString *log_format = [[NSString alloc] initWithUTF8String:"%16s %@\n"];
+NSString *log_format = [[NSString alloc] initWithUTF8String:"%-16s %@\n"];
 }
 
 //////////////////////////////////////////////////////////////////////

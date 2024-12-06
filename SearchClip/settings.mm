@@ -5,7 +5,6 @@
 #include <AppKit/NSEvent.h>
 
 #include "log.h"
-#include "mic_status.h"
 #include "settings.h"
 
 LOG_CONTEXT("settings");
@@ -24,12 +23,10 @@ void save_settings(void)
 #define SAVE(type, val)                              \
     [defaults set##type:settings.val forKey:@ #val]; \
     LOG(@"Saved " #val);
-
+    
     SAVE(Bool, hotkey_enabled);
-    SAVE(Bool, show_overlay);
     SAVE(Bool, run_at_login);
-    SAVE(Integer, hotkey);
-    SAVE(Integer, modifiers);
+    SAVE(Object, search_format);
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -41,10 +38,8 @@ void load_settings(void)
     NSArray<NSString *> *keys = [[defaults dictionaryRepresentation] allKeys];
 
     settings.run_at_login = false;
-    settings.show_overlay = true;
     settings.hotkey_enabled = true;
-    settings.hotkey = 'C';
-    settings.modifiers = NSEventModifierFlagFunction;
+    settings.search_format = @"https://google.com/search?q={{CLIP}}";
 
 #define LOAD(type, val)                                                        \
     if ([keys containsObject:@ #val]) {                                        \
@@ -53,8 +48,6 @@ void load_settings(void)
     }
 
     LOAD(bool, hotkey_enabled);
-    LOAD(bool, show_overlay);
     LOAD(bool, run_at_login);
-    LOAD(integer, hotkey);
-    LOAD(integer, modifiers);
+    LOAD(string, search_format);
 }

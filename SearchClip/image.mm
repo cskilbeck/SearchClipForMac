@@ -8,39 +8,10 @@
 
 #include "log.h"
 #include "lunasvg/include/lunasvg.h"
-#include "mic_status.h"
 
 LOG_CONTEXT("image");
 
-#include "Image/microphone_disconnected_svg.h"
-#include "Image/microphone_mute_svg.h"
-#include "Image/microphone_normal_svg.h"
-
-#include "Image/microphone_disconnected_small_svg.h"
-#include "Image/microphone_mute_small_svg.h"
-#include "Image/microphone_normal_small_svg.h"
-
 #include "Image/search_svg.h"
-
-//////////////////////////////////////////////////////////////////////
-
-// clang-format off
-
-char const **microphone_svgs[mic_num_statuses] =
-{
-    &microphone_mute_svg,
-    &microphone_normal_svg,
-    &microphone_disconnected_svg
-};
-
-char const **microphone_small_svgs[mic_num_statuses] =
-{
-    &microphone_mute_small_svg,
-    &microphone_normal_small_svg,
-    &microphone_disconnected_small_svg
-};
-
-// clang-format on
 
 //////////////////////////////////////////////////////////////////////
 
@@ -80,20 +51,8 @@ static NSImage *svg_to_image(char const *svg, int size)
 
 //////////////////////////////////////////////////////////////////////
 
-extern "C" NSImage *get_image_for_mic_status(int status, int size)
+extern "C" NSImage *get_status_image(int size)
 {
-    if (status < 0 || status >= mic_num_statuses) {
-        return nullptr;
-    }
-    return svg_to_image(*microphone_svgs[status], size);
+    return svg_to_image(search_svg, size);
 }
 
-//////////////////////////////////////////////////////////////////////
-
-extern "C" NSImage *get_small_image_for_mic_status(int status, int size)
-{
-    if (status < 0 || status >= mic_num_statuses) {
-        return nullptr;
-    }
-    return svg_to_image(*microphone_small_svgs[status], size);
-}

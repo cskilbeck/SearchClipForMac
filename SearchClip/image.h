@@ -4,8 +4,7 @@
 extern "C" {
 #endif
 
-NSImage *get_image_for_mic_status(int status, int size);
-NSImage *get_small_image_for_mic_status(int status, int size);
+NSImage *get_status_image(int size);
 
 #if defined(__cplusplus)
 }

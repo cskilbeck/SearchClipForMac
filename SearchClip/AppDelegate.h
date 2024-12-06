@@ -8,11 +8,13 @@
 
 - (void)options_closing;
 
-- (void)audio_changed;
+- (void)enable_hotkey;
 
-- (void)setup_hotkey;
+- (void)disable_hotkey;
 
-- (void)scan_for_hotkey;
+- (bool)on_double_tap;
+
+- (void)enable_searchclip;
 
 - (CGEventRef)hotkey_pressed:(CGEventTapProxy)proxy type:(CGEventType)type event:(CGEventRef)cgevent;
 

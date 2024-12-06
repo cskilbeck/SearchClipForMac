@@ -17,29 +17,23 @@
 
 //////////////////////////////////////////////////////////////////////
 
-@interface OptionsWindow : NSWindowController <NSTabViewDelegate, NSWindowDelegate>
+@interface OptionsWindow : NSWindowController <NSTabViewDelegate, NSWindowDelegate, NSControlTextEditingDelegate>
 
-@property(weak) IBOutlet NSButton *enable_hotkey_button;
 @property(weak) IBOutlet NSButton *button_run_at_login;
-@property(weak) IBOutlet NSTextField *hotkey_textfield;
 @property(weak) IBOutlet LinkButton *github_button;
 @property(weak) IBOutlet NSButtonCell *github_button_cell;
-@property(weak) IBOutlet NSButton *show_overlay_button;
-@property(weak) IBOutlet NSBox *outline_box;
-@property(weak) IBOutlet NSBox *hotkey_container_box;
+@property(weak) IBOutlet NSTextField *search_format;
+@property(weak) IBOutlet NSComboBox *default_searches_combobox;
 
-- (IBAction)enable_hotkey_changed:(NSButton *)sender;
 - (IBAction)ok_pressed:(id)sender;
 - (IBAction)run_after_login_changed:(NSButton *)sender;
 - (IBAction)github_link_clicked:(LinkButton *)sender;
-- (IBAction)show_overlay_button_changed:(NSButton *)sender;
-- (IBAction)set_hotkey_button:(NSButton *)sender;
+- (IBAction)default_search_chosen:(NSComboBox *)sender;
 
 - (void)on_deactivate;
 
-- (void)on_hotkey_scanned;
-- (void)set_hotkey;
-
 - (void)update_controls;
+
+- (void) controlTextDidChange:(NSNotification *)obj;
 
 @end

@@ -8,39 +8,25 @@
         <customObject id="-2" userLabel="File's Owner" customClass="OptionsWindow">
             <connections>
                 <outlet property="button_run_at_login" destination="nQD-CP-nRR" id="ZCy-YC-pL2"/>
-                <outlet property="enable_hotkey_button" destination="OUT-hv-IPO" id="yKs-C6-SPz"/>
+                <outlet property="default_searches_combobox" destination="wyb-0D-hUe" id="FEw-0E-T4c"/>
                 <outlet property="github_button" destination="loW-1z-o8t" id="tnz-6r-7w3"/>
                 <outlet property="github_button_cell" destination="b2D-SK-TWf" id="l6i-wa-1Pu"/>
-                <outlet property="hotkey_container_box" destination="qNt-p9-tYd" id="RFl-tK-GSU"/>
-                <outlet property="hotkey_textfield" destination="Lhg-ja-acE" id="JSw-qs-zk4"/>
-                <outlet property="outline_box" destination="nD0-7X-hmU" id="ZzY-DX-41L"/>
-                <outlet property="show_overlay_button" destination="Ahs-4i-nHN" id="fCC-Nw-9hq"/>
+                <outlet property="search_format" destination="1Ag-I7-XyD" id="LxP-bW-ngQ"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="MicMuter Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="F0z-JX-Cv5">
+        <window title="SearchClip Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="805" y="414" width="337" height="154"/>
+            <rect key="contentRect" x="805" y="414" width="562" height="138"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <view key="contentView" wantsLayer="YES" focusRingType="none" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="337" height="154"/>
+                <rect key="frame" x="0.0" y="0.0" width="562" height="138"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUT-hv-IPO" userLabel="EnableHotkeyButton">
-                        <rect key="frame" x="18" y="115" width="108" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Enable hotkey" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="P1T-Ae-1jL">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="enable_hotkey_changed:" target="-2" id="OnI-hc-CHj"/>
-                        </connections>
-                    </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQD-CP-nRR" userLabel="RunAtLoginButton">
-                        <rect key="frame" x="18" y="59" width="94" height="18"/>
+                        <rect key="frame" x="18" y="60" width="94" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Run at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DOf-xI-WCk">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -50,75 +36,29 @@
                             <action selector="run_after_login_changed:" target="-2" id="Qps-I7-fV0"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahs-4i-nHN" userLabel="ShowOverlayButton">
-                        <rect key="frame" x="18" y="87" width="103" height="18"/>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kv-tX-kat">
+                        <rect key="frame" x="18" y="100" width="108" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Show overlay" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="YTk-lB-LNl">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Search format" id="QhS-LU-aDw">
                             <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="show_overlay_button_changed:" target="-2" id="VuB-D7-tU7"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="loW-1z-o8t" userLabel="GithubLinkButton" customClass="LinkButton">
-                        <rect key="frame" x="20" y="20" width="124" height="21"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ag-I7-XyD">
+                        <rect key="frame" x="114" y="97" width="312" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" title="MicMuter on Github" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="b2D-SK-TWf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="https://google.com/search?q={{CLIP}}" drawsBackground="YES" id="OHN-n5-2rV">
                             <font key="font" metaFont="system"/>
-                        </buttonCell>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
                         <connections>
-                            <action selector="github_link_clicked:" target="-2" id="R8R-OM-Eba"/>
+                            <outlet property="delegate" destination="-2" id="PLY-je-1gh"/>
                         </connections>
-                    </button>
-                    <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="HotkeyBox" titlePosition="noTitle" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNt-p9-tYd">
-                        <rect key="frame" x="145" y="113" width="172" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView" focusRingType="exterior" id="ZCS-pv-GCr">
-                            <rect key="frame" x="0.0" y="0.0" width="172" height="24"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <box fixedFrame="YES" boxType="custom" borderType="line" borderWidth="3" cornerRadius="4" title="OulineBox" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-7X-hmU">
-                                    <rect key="frame" x="0.0" y="0.0" width="147" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <view key="contentView" id="2dB-0c-stG">
-                                        <rect key="frame" x="3" y="3" width="141" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </view>
-                                    <color key="borderColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
-                                </box>
-                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-ja-acE" userLabel="HotkeyTextField">
-                                    <rect key="frame" x="4" y="3" width="140" height="18"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" focusRingType="exterior" alignment="center" title="⌃⇧⌥⌘ # F71E" drawsBackground="YES" usesSingleLineMode="YES" id="WCp-uo-4Tf" userLabel="HotkeyTextCell">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <outlet property="delegate" destination="-2" id="STo-Y2-l5X"/>
-                                    </connections>
-                                </textField>
-                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-q5-CDZ" userLabel="SetHotkeyButton">
-                                    <rect key="frame" x="146" y="-5" width="25" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSInvalidDataFreestandingTemplate" imagePosition="left" alignment="left" imageScaling="proportionallyDown" inset="2" id="Ozv-3m-zZ5">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="smallSystemBold"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="set_hotkey_button:" target="-2" id="ehI-i6-YRq"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </view>
-                        <color key="borderColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        <font key="titleFont" metaFont="system"/>
-                    </box>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1F-2C-8Eq" userLabel="OKButton">
-                        <rect key="frame" x="248" y="13" width="75" height="32"/>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="u1F-2C-8Eq" userLabel="OKButton">
+                        <rect key="frame" x="474" y="13" width="75" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZiA-26-CLg">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -131,15 +71,45 @@ DQ
                             <action selector="ok_pressed:" target="-2" id="jFn-3D-j1F"/>
                         </connections>
                     </button>
+                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-zv-x6n">
+                        <rect key="frame" x="183" y="18" width="260" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" title="Double-tap ⌘C to search for selected text" id="2fs-Ro-Il8">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <comboBox focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyb-0D-hUe">
+                        <rect key="frame" x="433" y="96" width="112" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="iXX-7m-obX">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </comboBoxCell>
+                        <connections>
+                            <action selector="default_search_chosen:" target="-2" id="jDo-yS-sIE"/>
+                            <outlet property="delegate" destination="-2" id="zDi-Iu-yDQ"/>
+                        </connections>
+                    </comboBox>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="loW-1z-o8t" userLabel="GithubLinkButton" customClass="LinkButton">
+                        <rect key="frame" x="20" y="20" width="133" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="SearchClip on Github" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="b2D-SK-TWf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="github_link_clicked:" target="-2" id="R8R-OM-Eba"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="UXo-Zc-OIA"/>
             </connections>
-            <point key="canvasLocation" x="-477" y="98"/>
+            <point key="canvasLocation" x="-615" y="25"/>
         </window>
     </objects>
-    <resources>
-        <image name="NSInvalidDataFreestandingTemplate" width="19" height="19"/>
-    </resources>
 </document>
