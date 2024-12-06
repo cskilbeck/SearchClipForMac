@@ -8,7 +8,7 @@ extern "C" {
 
 //////////////////////////////////////////////////////////////////////
 
-#if DEBUG
+#ifdef DEBUG
 
 void emit_log_message(char const *tag, NSString *format, ...);
 

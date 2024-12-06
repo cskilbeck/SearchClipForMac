@@ -62,7 +62,6 @@ NSString *default_search_names[num_default_searches] = {
 
 - (void)update_controls
 {
-    [[self button_run_at_login] setState:settings.run_at_login ? NSControlStateValueOn : NSControlStateValueOff];
     [[self search_format] setStringValue:settings.search_format];
 }
 
@@ -113,15 +112,6 @@ NSString *default_search_names[num_default_searches] = {
 - (IBAction)ok_pressed:(id)sender
 {
     [self close];
-}
-
-//////////////////////////////////////////////////////////////////////
-// 'run after login' check button changed state
-
-- (IBAction)run_after_login_changed:(NSButton *)sender
-{
-    settings.run_at_login = [sender state] == NSControlStateValueOn;
-    save_settings();
 }
 
 //////////////////////////////////////////////////////////////////////

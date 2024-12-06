@@ -1,8 +1,4 @@
 //////////////////////////////////////////////////////////////////////
-// App Icon
-// Run after login
-// Sandboxing
-// Input Monitoring vs Accessibility permissions
 
 #import <AVFoundation/AVFoundation.h>
 #import <ApplicationServices/ApplicationServices.h>
@@ -110,12 +106,6 @@ NSImage *status_image;
 
 //////////////////////////////////////////////////////////////////////
 
-- (void)debug_dump
-{
-}
-
-//////////////////////////////////////////////////////////////////////
-
 - (void)enable_searchclip
 {
     if(settings.hotkey_enabled) {
@@ -196,13 +186,9 @@ NSImage *status_image;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    LOG(@"----------------------------------------------------------");
-
-    NSProcessInfo *pInfo = [NSProcessInfo processInfo];
-    NSString *version = [pInfo operatingSystemVersionString];
-
-    NSOperatingSystemVersion ver = [NSProcessInfo.processInfo operatingSystemVersion];
-
+    [[maybe_unused]] NSProcessInfo *pInfo = [NSProcessInfo processInfo];
+    [[maybe_unused]] NSString *version = [pInfo operatingSystemVersionString];
+    [[maybe_unused]] NSOperatingSystemVersion ver = [NSProcessInfo.processInfo operatingSystemVersion];
     LOG(@"OS: %@ (%d.%d.%d)", version, ver.majorVersion, ver.minorVersion, ver.patchVersion);
 
     load_settings();
@@ -216,17 +202,16 @@ NSImage *status_image;
     [status_menu addItem:[NSMenuItem separatorItem]];
     [status_menu addItemWithTitle:@"Quit SearchClip" action:@selector(terminate:) keyEquivalent:@""];
 #if DEBUG
-    [status_menu addItem:[NSMenuItem separatorItem]];
-    [status_menu addItemWithTitle:@"Debug Dump" action:@selector(debug_dump) keyEquivalent:@""];
+    [[status_menu addItemWithTitle:@"Debug Build" action:NULL keyEquivalent:@""] setEnabled:false];
 #endif
 
     status_item = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     status_item.menu = status_menu;
 
     NSRect frame = [[status_item valueForKey:@"window"] frame];
-    int sz = (int)(frame.size.height);
+    int sz = static_cast<int>(frame.size.height * 0.75f);
     status_image = get_status_image(sz);
-    [status_image setTemplate:YES];
+    [status_image setTemplate:NO];
     
     [self set_status_icon];
     [self enable_searchclip];

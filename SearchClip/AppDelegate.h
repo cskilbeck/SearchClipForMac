@@ -20,4 +20,3 @@
 
 @end
 
-extern bool hotkey_scanning;

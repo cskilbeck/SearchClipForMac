@@ -25,7 +25,6 @@ void save_settings(void)
     LOG(@"Saved " #val);
     
     SAVE(Bool, hotkey_enabled);
-    SAVE(Bool, run_at_login);
     SAVE(Object, search_format);
 }
 
@@ -37,7 +36,6 @@ void load_settings(void)
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray<NSString *> *keys = [[defaults dictionaryRepresentation] allKeys];
 
-    settings.run_at_login = false;
     settings.hotkey_enabled = true;
     settings.search_format = @"https://google.com/search?q={{CLIP}}";
 
@@ -48,6 +46,5 @@ void load_settings(void)
     }
 
     LOAD(bool, hotkey_enabled);
-    LOAD(bool, run_at_login);
     LOAD(string, search_format);
 }

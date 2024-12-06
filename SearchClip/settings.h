@@ -6,7 +6,6 @@
 
 typedef struct settings {
 
-    bool run_at_login;
     bool hotkey_enabled;
     NSString *search_format;
 
