@@ -10,20 +10,22 @@ LOG_CONTEXT("OptionsWindow");
 
 //////////////////////////////////////////////////////////////////////
 
-int const num_default_searches = 4;
+int const num_default_searches = 5;
 
 NSString *default_searches[num_default_searches] = {
     @"https://google.com/search?q={{CLIP}}",
     @"https://bing.com/search?q={{CLIP}}",
     @"https://duckduckgo.com/?q={{CLIP}}",
-    @"https://dogpile.com/serp?q={{CLIP}}",
+    @"https://search.yahoo.com/?q={{CLIP}}",
+    @"https://www.ask.com/web?q={{CLIP}}",
 };
 
 NSString *default_search_names[num_default_searches] = {
     @"Google",
     @"Bing",
     @"DuckDuckGo",
-    @"DogPile",
+    @"Yahoo",
+    @"Ask",
 };
 
 @implementation LinkButton

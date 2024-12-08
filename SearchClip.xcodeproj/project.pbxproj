@@ -12,6 +12,7 @@
 		AA49BD8D2D033E78007EC97E /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA67B0E62D030E760065AE76 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA72B9472D0320AD00B2625A /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
+		AAACF8A62D05C43900C40779 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AAAE4B852D00F32C00AEA4BA /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AACAA2022D031F7700457750 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AAEB68E12CFBDDE7000D000A /* SearchClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +39,9 @@
 			exceptions = (
 				AAAE4BD22D00FD5200AEA4BA /* Exceptions for "SearchClip" folder in "SearchClip" target */,
 			);
+			explicitFileTypes = {
+				tlds.mm = sourcecode.cpp.objcpp;
+			};
 			path = SearchClip;
 			sourceTree = "<group>";
 		};
@@ -83,6 +87,13 @@
 			sourceTree = "<group>";
 		};
 		AA72B95B2D0320AD00B2625A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAACF8BA2D05C43900C40779 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -179,20 +190,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AA67B0FA2D030E760065AE76 /* Products */;
-					ProjectRef = AA67B0E62D030E760065AE76 /* lunasvg.xcodeproj */;
-				},
-				{
-					ProductGroup = AACAA2162D031F7700457750 /* Products */;
-					ProjectRef = AACAA2022D031F7700457750 /* lunasvg.xcodeproj */;
-				},
-				{
-					ProductGroup = AA3C15882D03219200018073 /* Products */;
-					ProjectRef = AA3C15742D03219200018073 /* lunasvg.xcodeproj */;
-				},
-				{
-					ProductGroup = AAEB694C2CFBDF8A000D000A /* Products */;
-					ProjectRef = AAEB69492CFBDF8A000D000A /* lunasvg.xcodeproj */;
+					ProductGroup = AAACF8BA2D05C43900C40779 /* Products */;
+					ProjectRef = AAACF8A62D05C43900C40779 /* lunasvg.xcodeproj */;
 				},
 				{
 					ProductGroup = AA72B95B2D0320AD00B2625A /* Products */;
@@ -209,6 +208,22 @@
 				{
 					ProductGroup = AAAE4B9E2D00F32C00AEA4BA /* Products */;
 					ProjectRef = AAAE4B852D00F32C00AEA4BA /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AA67B0FA2D030E760065AE76 /* Products */;
+					ProjectRef = AA67B0E62D030E760065AE76 /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AACAA2162D031F7700457750 /* Products */;
+					ProjectRef = AACAA2022D031F7700457750 /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AA3C15882D03219200018073 /* Products */;
+					ProjectRef = AA3C15742D03219200018073 /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AAEB694C2CFBDF8A000D000A /* Products */;
+					ProjectRef = AAEB69492CFBDF8A000D000A /* lunasvg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -377,6 +392,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chs.searchclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +424,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chs.searchclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";

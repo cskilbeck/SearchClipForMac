@@ -10,6 +10,10 @@
 #include "settings.h"
 #include "image.h"
 
+#include <vector>
+
+extern std::vector<char const *> tlds;
+
 LOG_CONTEXT("AppDelegate");
 
 CGEventRef __nullable on_hotkey(CGEventTapProxy proxy, CGEventType type, CGEventRef cgevent, void *__nullable userInfo);
@@ -43,10 +47,46 @@ NSImage *status_image;
     if([clipString length] > 1000) {
         return false;
     }
+
+    LOG(@"Clip: %@", clipString);
+
+    // if it starts with http{s}:// then just open it as a url
+    NSString *upperClip = [clipString uppercaseString];
+    bool hasPrefix = false;
+    bool isUrl = false;
+    if([upperClip hasPrefix:@"HTTP://"] || [upperClip hasPrefix:@"HTTPS://"]) {
+        isUrl = true;
+        hasPrefix = true;
+    }
+    
+    LOG(@"CLIP LEN: %d", [upperClip length]);
+
+    // if it ends with .tld or contains .tld/ then just open it as a url
+    for(auto t : tlds) {
+        NSString *tld = [NSString stringWithUTF8String:t];
+        NSUInteger tldLen = [tld length];
+        NSRange foundTld = [upperClip rangeOfString:tld];
+        LOG(@"TLD: %@, TLD_LEN: %d, found: %d", tld, tldLen, foundTld);
+        isUrl = (foundTld.location != NSNotFound &&
+                 (foundTld.location == [upperClip length] - tldLen ||
+                  [upperClip characterAtIndex:foundTld.location + tldLen] == '/'));
+        if(isUrl) {
+            break;
+        }
+    }
+    if(isUrl) {
+        if(!hasPrefix) {
+            clipString = [NSString stringWithFormat:@"https://%@", clipString];
+        }
+        NSURL *url = [NSURL URLWithString:clipString encodingInvalidCharacters:true];
+        [[NSWorkspace sharedWorkspace] openURL:url];
+        return true;
+    }
+    
+    // github
     
     NSCharacterSet *allowedCharacters = [NSCharacterSet URLQueryAllowedCharacterSet];
     NSString *searchString = [clipString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
-    LOG(@"Clip: %@", searchString);
     NSString *urlString = [settings.search_format stringByReplacingOccurrencesOfString:@"{{CLIP}}" withString:searchString];
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 
