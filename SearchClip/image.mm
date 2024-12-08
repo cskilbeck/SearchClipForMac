@@ -11,7 +11,7 @@
 
 LOG_CONTEXT("image");
 
-#include "Image/search_svg.h"
+#include "search_svg.h"
 
 //////////////////////////////////////////////////////////////////////
 

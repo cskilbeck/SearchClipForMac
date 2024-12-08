@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		AA3363B12D065F1500CB1C54 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA3C15742D03219200018073 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA41F20F2CFC80280006D312 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA49BD8D2D033E78007EC97E /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
@@ -58,6 +59,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA3363C62D065F1500CB1C54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AA3C15882D03219200018073 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +232,10 @@
 				{
 					ProductGroup = AAEB694C2CFBDF8A000D000A /* Products */;
 					ProjectRef = AAEB69492CFBDF8A000D000A /* lunasvg.xcodeproj */;
+				},
+				{
+					ProductGroup = AA3363C62D065F1500CB1C54 /* Products */;
+					ProjectRef = AA3363B12D065F1500CB1C54 /* lunasvg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
