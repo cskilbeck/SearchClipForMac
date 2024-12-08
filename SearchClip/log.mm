@@ -4,8 +4,6 @@
 
 //////////////////////////////////////////////////////////////////////
 
-#ifdef DEBUG
-
 namespace
 {
 NSString *log_format = [[NSString alloc] initWithUTF8String:"%-16s %@\n"];
@@ -22,5 +20,3 @@ extern "C" void emit_log_message(char const *tag, NSString *format, ...)
     NSString *log_string = [[NSString alloc] initWithFormat:log_format, tag, formattedString];
     [[NSFileHandle fileHandleWithStandardOutput] writeData:[log_string dataUsingEncoding:NSNEXTSTEPStringEncoding]];
 }
-
-#endif

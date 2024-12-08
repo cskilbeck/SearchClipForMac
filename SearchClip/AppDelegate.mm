@@ -43,23 +43,26 @@ NSImage *status_image;
     LOG(@"Double TAP!");
     NSPasteboard*  myPasteboard  = [NSPasteboard generalPasteboard];
     NSString* clipString = [myPasteboard  stringForType:NSPasteboardTypeString];
-
+    clipString = [clipString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
     if([clipString length] > 1000) {
         return false;
     }
 
-    LOG(@"Clip: %@", clipString);
+    LOG(@"Clip: [%@]", clipString);
 
     // if it starts with http{s}:// then just open it as a url
-    NSString *upperClip = [clipString uppercaseString];
+    NSString *upperClip = [clipString uppercaseString];
+
     bool hasPrefix = false;
     bool isUrl = false;
+
     if([upperClip hasPrefix:@"HTTP://"] || [upperClip hasPrefix:@"HTTPS://"]) {
         isUrl = true;
         hasPrefix = true;
     }
     
-    LOG(@"CLIP LEN: %d", [upperClip length]);
+    LOG(@"CLIP: [%@] LEN: %d", upperClip, [upperClip length]);
 
     // if it ends with .tld or contains .tld/ then just open it as a url
     for(auto t : tlds) {
@@ -79,11 +82,12 @@ NSImage *status_image;
             clipString = [NSString stringWithFormat:@"https://%@", clipString];
         }
         NSURL *url = [NSURL URLWithString:clipString encodingInvalidCharacters:true];
+        LOG(@"URL:%@", url);
         [[NSWorkspace sharedWorkspace] openURL:url];
         return true;
     }
     
-    // github
+    // github.com
     
     NSCharacterSet *allowedCharacters = [NSCharacterSet URLQueryAllowedCharacterSet];
     NSString *searchString = [clipString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];

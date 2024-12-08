@@ -51,7 +51,7 @@ static NSImage *svg_to_image(char const *svg, int size)
 
 //////////////////////////////////////////////////////////////////////
 
-extern "C" NSImage *get_status_image(int size)
+NSImage *get_status_image(int size)
 {
     return svg_to_image(search_svg, size);
 }
