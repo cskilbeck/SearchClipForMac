@@ -44,7 +44,7 @@ NSImage *status_image;
         return false;
     }
     
-    NSCharacterSet *allowedCharacters = [NSCharacterSet URLPathAllowedCharacterSet];
+    NSCharacterSet *allowedCharacters = [NSCharacterSet URLQueryAllowedCharacterSet];
     NSString *searchString = [clipString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
     LOG(@"Clip: %@", searchString);
     NSString *urlString = [settings.search_format stringByReplacingOccurrencesOfString:@"{{CLIP}}" withString:searchString];

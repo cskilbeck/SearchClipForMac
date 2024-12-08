@@ -118,7 +118,7 @@ NSString *default_search_names[num_default_searches] = {
 
 - (IBAction)github_link_clicked:(LinkButton *)sender
 {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/cskilbeck/SearchClip"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/cskilbeck/SearchClipForMac"]];
 }
 
 //////////////////////////////////////////////////////////////////////
