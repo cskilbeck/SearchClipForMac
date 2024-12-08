@@ -150,12 +150,37 @@ NSImage *status_image;
 
 //////////////////////////////////////////////////////////////////////
 
-- (void)enable_searchclip
+- (void)toggle_enabled
+{
+    settings.hotkey_enabled = !settings.hotkey_enabled;
+    [self enable_or_disable_searchclip];
+}
+
+//////////////////////////////////////////////////////////////////////
+
+- (void)enable_or_disable_searchclip
 {
     if(settings.hotkey_enabled) {
-        [self disable_hotkey];
+        LOG(@"enable hotkey");
+        if (!hotkey_installed) {
+            NSDictionary *options_prompt = @{(__bridge id)kAXTrustedCheckOptionPrompt : @YES};
+            if (AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options_prompt)) {
+                LOG(@"permissions OK");
+                hotkey_tap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, kCGEventTapOptionDefault,
+                                              CGEventMaskBit(kCGEventKeyDown), on_hotkey, (__bridge void *)self);
+                hotkey_runloop_source_ref = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, hotkey_tap, 0);
+                CFRunLoopAddSource(CFRunLoopGetMain(), hotkey_runloop_source_ref, kCFRunLoopCommonModes);
+                hotkey_installed = true;
+            }
+        }
     } else {
-        [self enable_hotkey];
+        LOG(@"disable hotkey");
+        if(hotkey_installed) {
+            CFRunLoopRemoveSource(CFRunLoopGetMain(), hotkey_runloop_source_ref, kCFRunLoopCommonModes);
+            hotkey_tap = nil;
+            hotkey_runloop_source_ref = nil;
+            hotkey_installed = false;
+        }
     }
     settings.hotkey_enabled = hotkey_installed;
     if(hotkey_installed) {
@@ -197,37 +222,6 @@ NSImage *status_image;
 
 //////////////////////////////////////////////////////////////////////
 
-- (void)enable_hotkey
-{
-    LOG(@"enable hotkey");
-    if (!hotkey_installed) {
-        NSDictionary *options_prompt = @{(__bridge id)kAXTrustedCheckOptionPrompt : @YES};
-        if (AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options_prompt)) {
-            LOG(@"permissions OK");
-            hotkey_tap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, kCGEventTapOptionDefault,
-                                          CGEventMaskBit(kCGEventKeyDown), on_hotkey, (__bridge void *)self);
-            hotkey_runloop_source_ref = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, hotkey_tap, 0);
-            CFRunLoopAddSource(CFRunLoopGetMain(), hotkey_runloop_source_ref, kCFRunLoopCommonModes);
-            hotkey_installed = true;
-        }
-    }
-}
-
-//////////////////////////////////////////////////////////////////////
-
--(void)disable_hotkey
-{
-    LOG(@"disable hotkey");
-    if(hotkey_installed) {
-        CFRunLoopRemoveSource(CFRunLoopGetMain(), hotkey_runloop_source_ref, kCFRunLoopCommonModes);
-        hotkey_tap = nil;
-        hotkey_runloop_source_ref = nil;
-        hotkey_installed = false;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[maybe_unused]] NSProcessInfo *pInfo = [NSProcessInfo processInfo];
@@ -242,7 +236,7 @@ NSImage *status_image;
     NSMenu *status_menu = [[NSMenu alloc] initWithTitle:@"menu"];
 
     [status_menu addItemWithTitle:@"Options" action:@selector(show_options_window) keyEquivalent:@""];
-    enable_menu_item = [status_menu addItemWithTitle:@"Enable SearchClip" action:@selector(enable_searchclip) keyEquivalent:@""];
+    enable_menu_item = [status_menu addItemWithTitle:@"Enable SearchClip" action:@selector(toggle_enabled) keyEquivalent:@""];
     [status_menu addItem:[NSMenuItem separatorItem]];
     [status_menu addItemWithTitle:@"Quit SearchClip" action:@selector(terminate:) keyEquivalent:@""];
 #if DEBUG
@@ -258,7 +252,7 @@ NSImage *status_image;
     [status_image setTemplate:NO];
     
     [self set_status_icon];
-    [self enable_searchclip];
+    [self enable_or_disable_searchclip];
 }
 
 //////////////////////////////////////////////////////////////////////
