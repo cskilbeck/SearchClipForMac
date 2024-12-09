@@ -28,39 +28,11 @@ NSString *default_search_names[num_default_searches] = {
     @"Ask",
 };
 
-@implementation LinkButton
-
-- (void)set_link_color
-{
-    NSColor *color = [NSColor linkColor];
-    NSMutableAttributedString *t = [[NSMutableAttributedString alloc] initWithAttributedString:[self attributedTitle]];
-    NSRange titleRange = NSMakeRange(0, [t length]);
-    [t addAttribute:NSForegroundColorAttributeName value:color range:titleRange];
-    [self setAttributedTitle:t];
-}
-
-- (void)resetCursorRects
-{
-    if (self.cursor) {
-        [self addCursorRect:[self bounds] cursor:self.cursor];
-    } else {
-        [super resetCursorRects];
-    }
-}
-
-//////////////////////////////////////////////////////////////////////
-
-@end
-
-//////////////////////////////////////////////////////////////////////
-
-@interface OptionsWindow () {
-}
-@end
-
 //////////////////////////////////////////////////////////////////////
 
 @implementation OptionsWindow
+
+//////////////////////////////////////////////////////////////////////
 
 - (void)update_controls
 {
@@ -92,7 +64,7 @@ NSString *default_search_names[num_default_searches] = {
 
 - (void)controlTextDidChange:(NSNotification *)notification {
     NSTextField *textField = [notification object];
-    NSLog(@"controlTextDidChange: stringValue == %@", [textField stringValue]);
+    LOG(@"controlTextDidChange: stringValue == %@", [textField stringValue]);
     settings.search_format = [textField stringValue];
     save_settings();
 }

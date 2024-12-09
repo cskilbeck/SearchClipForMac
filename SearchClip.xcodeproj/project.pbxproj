@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		AA3363B12D065F1500CB1C54 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
+		AA3364582D066BC700CB1C54 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA3C15742D03219200018073 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA41F20F2CFC80280006D312 /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
 		AA49BD8D2D033E78007EC97E /* lunasvg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = lunasvg.xcodeproj; sourceTree = "<group>"; };
@@ -60,6 +61,13 @@
 
 /* Begin PBXGroup section */
 		AA3363C62D065F1500CB1C54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA33646E2D066BC700CB1C54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -197,6 +205,10 @@
 			productRefGroup = AAEB68E22CFBDDE7000D000A /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = AA33646E2D066BC700CB1C54 /* Products */;
+					ProjectRef = AA3364582D066BC700CB1C54 /* lunasvg.xcodeproj */;
+				},
 				{
 					ProductGroup = AAACF8BA2D05C43900C40779 /* Products */;
 					ProjectRef = AAACF8A62D05C43900C40779 /* lunasvg.xcodeproj */;
